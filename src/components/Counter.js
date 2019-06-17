@@ -17,6 +17,11 @@ class Counter extends Component {
         setTimeout(() => { this.props.increment() }, 1000);
     };
 
+    incrementAsync2 = () =>{
+        // increment every second
+        setInterval(() => { this.props.increment() }, 1000);
+    }
+
     render() {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
@@ -38,6 +43,9 @@ class Counter extends Component {
                 <button onClick={this.incrementAsync}>
                     Increment async
                 </button> 
+                <button onClick={this.incrementAsync2}>
+                    Increment Each Second
+                </button>
             </p>
         );
     }
